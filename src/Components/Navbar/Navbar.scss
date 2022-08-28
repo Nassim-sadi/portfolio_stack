@@ -80,8 +80,8 @@
         bottom: 0;
         right: 0;
         z-index: 6;
-        padding: 1rem;
-        width: 80%;
+        padding: 0px;
+        width: calc(min(60%, 400px));
         height: 100vh;
         display: flex;
         flex-direction: column;

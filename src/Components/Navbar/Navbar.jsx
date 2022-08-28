@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './Navbar.scss';
 import images from '../../Constants/images';
 import { HiMenuAlt3, HiX } from 'react-icons/hi';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 const Navbar = () => {
-  const [Toggle, setToggle] = useState(false);
+  const [Toggle, setToggle] = useState();
   return (
     <nav className='app__navbar'>
       <div className='app__navbar-logo'>
@@ -22,26 +22,34 @@ const Navbar = () => {
       </ul>
       <div className='app__navbar-menu'>
         <HiMenuAlt3 onClick={() => setToggle(true)} />
-        {Toggle && (
-          <motion.div
-            whileInView={{ x: [300, 0] }}
-            transition={{ ease: 'easeOut', duration: 0.85 }}
-          >
-            <HiX onClick={() => setToggle(false)} />
-            <ul>
-              {['Home', 'About', 'Work', 'Skills', 'Contact'].map((elem) => {
-                return (
-                  <li key={elem} className='app__flex p-text'>
-                    <a href={`#${elem}`} onClick={() => setToggle(false)}>
-                      <div />
-                      {elem}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </motion.div>
-        )}
+        <AnimatePresence>
+          {Toggle && (
+            <motion.div
+              initial={{ width: '0', padding: 0, visibility: 'hidden' }}
+              animate={
+                Toggle
+                  ? { width: '70%', padding: 16, visibility: 'visible' }
+                  : { width: '0', padding: 0, visibility: 'hidden' }
+              }
+              transition={{ ease: 'circInOut', duration: 0.7 }}
+              exit={{ width: '0', padding: 0 }}
+            >
+              <HiX onClick={() => setToggle(false)} />
+              <ul>
+                {['Home', 'About', 'Work', 'Skills', 'Contact'].map((elem) => {
+                  return (
+                    <li key={elem} className='app__flex p-text'>
+                      <a href={`#${elem}`} onClick={() => setToggle(false)}>
+                        <div />
+                        {elem}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </nav>
   );
