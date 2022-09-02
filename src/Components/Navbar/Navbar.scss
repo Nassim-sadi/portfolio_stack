@@ -3,7 +3,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
+
+    @media screen and(min-width:900px) {
+        padding: 1rem 2rem;
+    }
+
+    @media screen and(min-width:900px) {
+        padding: 0.5rem 1rem;
+    }
+
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
@@ -145,7 +154,6 @@
                     }
                 }
             }
-
         }
 
         @media screen and(min-width:900px) {
@@ -157,7 +165,6 @@
         display: none;
     }
 }
-
 
 .app__navbar-logo {
     display: flex;

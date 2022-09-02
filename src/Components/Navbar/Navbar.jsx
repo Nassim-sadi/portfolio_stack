@@ -31,7 +31,7 @@ const Navbar = () => {
                   ? { width: '70%', padding: 16, visibility: 'visible' }
                   : { width: '0', padding: 0, visibility: 'hidden' }
               }
-              transition={{ ease: 'circInOut', duration: 0.7 }}
+              transition={{ duration: 0.7 }}
               exit={{ width: '0', padding: 0 }}
             >
               <HiX onClick={() => setToggle(false)} />
