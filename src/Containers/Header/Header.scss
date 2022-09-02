@@ -51,9 +51,10 @@
 .app__header-badge {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: column;
+  margin-bottom: 2rem;
 
   .badge-cmp,
   .tag-cmp {
