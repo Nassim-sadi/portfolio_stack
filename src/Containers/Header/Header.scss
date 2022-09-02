@@ -74,6 +74,11 @@
       text-transform: uppercase;
       text-align: right;
     }
+    p:first-letter {
+      text-transform: capitalize;
+      font-weight: bold;
+      color: var(--secondary-color);
+    }
   }
 
   span {
