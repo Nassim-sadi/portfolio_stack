@@ -14,7 +14,6 @@
 .app__container {
   width: 100%;
   min-height: 100vh;
-
   display: flex;
   flex-direction: row;
 }
@@ -46,7 +45,7 @@
   align-items: flex-end;
 
   p {
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: var(--black-color);
   }
 }

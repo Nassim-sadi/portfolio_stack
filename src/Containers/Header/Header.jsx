@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.scss';
 import { motion } from 'framer-motion';
 import images from '../../Constants/images.js';
-
+import { AppWrap } from '../../wrapper';
 const ScaleVariants = {
   whileInView: {
     scale: [0, 1],
@@ -15,7 +15,7 @@ const ScaleVariants = {
 };
 const Header = () => {
   return (
-    <div id='main' className='app__header app__flex'>
+    <div className='app__flex app__header'>
       <motion.div
         whileInView={{
           x: [-100, 0],
@@ -36,7 +36,7 @@ const Header = () => {
             </div>
           </div>
           <div className='tag-cmp app__flex'>
-            <p className='p-text'>Full Stack Developer</p>
+            <p className='p-text'> Full Stack Developer</p>
             <p className='p-text'>Freelancer</p>
           </div>
         </div>
@@ -74,4 +74,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default AppWrap(Header, 'Home');
