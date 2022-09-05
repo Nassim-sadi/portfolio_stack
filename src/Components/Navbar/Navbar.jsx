@@ -28,10 +28,10 @@ const Navbar = () => {
               initial={{ width: '0', padding: 0, visibility: 'hidden' }}
               animate={
                 Toggle
-                  ? { width: '70%', padding: 16, visibility: 'visible' }
+                  ? { width: '60%', padding: 16, visibility: 'visible' }
                   : { width: '0', padding: 0, visibility: 'hidden' }
               }
-              transition={{ duration: 0.7 }}
+              transition={{ duration: 0.3 }}
               exit={{ width: '0', padding: 0 }}
             >
               <HiX onClick={() => setToggle(false)} />
