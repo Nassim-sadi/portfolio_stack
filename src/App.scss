@@ -101,7 +101,7 @@
   justify-content: flex-end;
   align-items: center;
   flex-direction: column;
-
+  max-height: 100vh;
   padding: 1rem;
 
   div {
@@ -152,7 +152,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
+  max-height: 100vh;
   padding: 1rem;
 
   .app__navigation-dot {
