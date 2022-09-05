@@ -5,20 +5,38 @@
 }
 
 .app__profiles {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row: auto;
   margin-top: 2rem;
+  gap: 2rem;
+  @media screen and(max-width:1200px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media screen and(max-width:900px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and(max-width:640px) {
+    grid-template-columns: 1fr;
+  }
 }
+// .app__profiles {
+//   display: flex;
+//   justify-content: center;
+//   align-items: flex-start;
+//   flex-wrap: wrap;
+//   margin-top: 2rem;
+// }
 
 .app__profile-item {
   width: 190px;
+  @media screen and(max-width:640px) {
+    width: 260px;
+  }
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  margin: 2rem;
 
   img {
     width: 100%;
