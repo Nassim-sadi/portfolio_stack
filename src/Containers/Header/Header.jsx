@@ -67,4 +67,4 @@ const Header = () => {
   );
 };
 
-export default AppWrap(Header, 'Home');
+export default AppWrap(Header, 'Home', 'app__bg1');

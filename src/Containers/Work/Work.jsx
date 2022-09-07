@@ -109,4 +109,4 @@ const Work = () => {
   );
 };
 
-export default AppWrap(Work, 'Work');
+export default AppWrap(Work, 'Work', 'app__bg1');
