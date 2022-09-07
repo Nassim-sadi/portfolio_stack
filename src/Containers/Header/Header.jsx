@@ -53,13 +53,6 @@ const Header = () => {
         className='app__header-img'
       >
         <img src={images.cover} alt='cover_bg' />
-        <motion.img
-          whileInView={{ scale: [0, 1] }}
-          transition={{ duration: 1, ease: 'easeInOut' }}
-          src={images.circle}
-          alt='profile_circle'
-          className='overlay_circle'
-        />
       </motion.div>
       <motion.div variants={ScaleVariants} whileInView={ScaleVariants.whileInView} className='app__header-circles'>
         {[images.flutter, images.javascript, images.node].map((circle, index) => {
