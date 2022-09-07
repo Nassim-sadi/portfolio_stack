@@ -50,9 +50,25 @@
       text-transform: uppercase;
       font-weight: 600;
       transition: all 0.3s ease-in-out;
-
+      position: relative;
       &:hover {
         color: var(--secondary-color);
+      }
+      &:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: -5px;
+        content: '';
+        display: block;
+        height: 2px;
+        left: 50%;
+        position: absolute;
+        background: var(--secondary-color);
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+      &:hover:after {
+        width: 120%;
+        left: -10%;
       }
     }
 
