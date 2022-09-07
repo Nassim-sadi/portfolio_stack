@@ -62,7 +62,7 @@ const Header = () => {
         />
       </motion.div>
       <motion.div variants={ScaleVariants} whileInView={ScaleVariants.whileInView} className='app__header-circles'>
-        {[images.flutter, images.javascript, images.react].map((circle, index) => {
+        {[images.flutter, images.javascript, images.node].map((circle, index) => {
           return (
             <div className='circle-cmp app__flex' key={`circle-${index}`}>
               <img src={circle} alt='circle' />
