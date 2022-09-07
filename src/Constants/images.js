@@ -1,7 +1,6 @@
 import email from '../assets/email.png';
 import mobile from '../assets/mobile.png';
 import api from '../assets/api.png';
-import cpp from '../assets/cpp.png';
 import css from '../assets/css.png';
 import figma from '../assets/figma.png';
 import flutter from '../assets/flutter.png';
@@ -21,7 +20,7 @@ import about01 from '../assets/about01.png';
 import about02 from '../assets/about02.png';
 import about03 from '../assets/about03.png';
 import about04 from '../assets/about04.png';
-import cover from '../assets/cover.png';
+import cover from '../assets/cover.svg';
 import circle from '../assets/circle.svg';
 import logo from '../assets/logo.png';
 import adidas from '../assets/adidas.png';
@@ -35,7 +34,6 @@ const images = {
   email,
   mobile,
   api,
-  cpp,
   css,
   figma,
   flutter,
