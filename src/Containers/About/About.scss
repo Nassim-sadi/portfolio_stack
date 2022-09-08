@@ -27,13 +27,43 @@
 //   flex-wrap: wrap;
 //   margin-top: 2rem;
 // }
+.app__profile-parent {
+  position: relative;
+  width: 240px;
+  height: 320px;
+  transition: all 300ms ease-in;
+  &:hover {
+    scale: 1.1;
+  }
+}
+.app__profile-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.32);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.1px);
+  -webkit-backdrop-filter: blur(6.1px);
+  border: 1px solid rgba(255, 255, 255, 0.47);
+}
 
 .app__profile-item {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  background-color: var(--white-color);
-  width: 270px;
   flex-direction: column;
   padding: 1rem;
   border-radius: 1rem;
