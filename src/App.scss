@@ -3,18 +3,18 @@
   font-family: var(--font-base);
 }
 
-.app__bg1 {
+.app__bg2 {
   // background-color: var(--white-color);
-  background: url('/assets/bg1blurred.jpg');
+  background: url('/assets/bg3_flip.jpg');
   background-size: cover;
   width: 100vw;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.app__bg2 {
+.app__bg1 {
   // background-color: var(--primary-color);
-  background: url('/assets/bg3blurred.jpg');
+  background: url('/assets/bg3.jpg');
   background-size: cover;
   width: 100vw;
   background-repeat: no-repeat;
