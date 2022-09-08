@@ -33,7 +33,9 @@ const Testimonial = () => {
       {testimonials.length === 0 && (
         <>
           <div className='app__flex'>
-            <p className='p-text bold-text'>No Testimonials to show yet</p>
+            <p className=' bold-text' id='nothing'>
+              No Testimonials to show yet
+            </p>
           </div>
         </>
       )}
