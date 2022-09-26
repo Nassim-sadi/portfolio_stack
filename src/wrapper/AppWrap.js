@@ -17,5 +17,4 @@ const AppWrap = (Component, idName, classNames) =>
       </div>
     );
   };
-
 export default AppWrap;

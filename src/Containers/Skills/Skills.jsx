@@ -23,7 +23,6 @@ const Skills = () => {
   }, []);
   return (
     <>
-      {console.log()}
       <h2 className='head-text'>Skills {Experiences.length !== 0 && <span>and Experiences</span>}</h2>
 
       <div className='app__skills-container'>
