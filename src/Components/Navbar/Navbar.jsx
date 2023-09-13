@@ -15,26 +15,35 @@ const Navbar = () => {
       <ul className='app__navbar-links'>
         {['Home', 'About', 'Work', 'Skills', 'Contact'].map((elem) => {
           return (
-            <li key={`key-${elem}`} className='app__flex p-text'>
+            <li key={`key-${elem}`} className='app__flex'>
               <div />
               <a href={`#${elem}`}>{elem}</a>
             </li>
           );
         })}
+        <li className='app__flex download_cv'>
+          <a
+            target='_blank'
+            rel='noreferrer'
+            href='https://drive.google.com/file/d/1MynlRjD8BuiI6Q90oj-_TWZOWj5L0VfW/view?usp=drive_link'
+          >
+            download CV
+          </a>
+        </li>
       </ul>
       <div className='app__navbar-menu'>
         <HiMenuAlt3 onClick={() => setToggle(true)} />
         <AnimatePresence>
           {Toggle && (
             <motion.div
-              initial={{ width: '0', padding: 0, visibility: 'hidden' }}
+              initial={{ width: '0', padding: 16, visibility: 'hidden' }}
               animate={
                 Toggle
-                  ? { width: '60%', padding: 16, visibility: 'visible' }
-                  : { width: '0', padding: 0, visibility: 'hidden' }
+                  ? { width: '60%', visibility: 'visible' }
+                  : { width: '0', visibility: 'hidden' }
               }
               transition={{ duration: 0.3 }}
-              exit={{ width: '0', padding: 0 }}
+              exit={{ width: '0', padding: 16 }}
             >
               <HiX onClick={() => setToggle(false)} />
               <ul>
@@ -48,6 +57,16 @@ const Navbar = () => {
                     </li>
                   );
                 })}
+                <li className='app__flex p-text'>
+                  <a
+                    target='_blank'
+                    rel='noreferrer'
+                    href='https://drive.google.com/file/d/1MynlRjD8BuiI6Q90oj-_TWZOWj5L0VfW/view?usp=drive_link'
+                  >
+                    <div />
+                    download CV
+                  </a>
+                </li>
               </ul>
             </motion.div>
           )}

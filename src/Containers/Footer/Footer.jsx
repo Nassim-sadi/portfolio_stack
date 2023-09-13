@@ -6,7 +6,11 @@ import { client } from '../../client';
 import './Footer.scss';
 
 const Footer = () => {
-  const [formData, setFormData] = useState({ username: '', email: '', message: '' });
+  const [formData, setFormData] = useState({
+    username: '',
+    email: '',
+    message: '',
+  });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -98,8 +102,20 @@ const Footer = () => {
           <h3 className='head-text'>Thank you for getting in touch!</h3>
         </div>
       )}
+
+      <div className='copyright'>
+        <p className='p-text'>
+          {' '}
+          Copyright © {/\d{4}/.exec(Date())[0]} Nassim Sadi
+        </p>
+        <p className='p-text'>All rights reserved</p>
+      </div>
     </>
   );
 };
 
-export default AppWrap(MotionWrap(Footer, 'app__footer'), 'Contact', 'app__bg2');
+export default AppWrap(
+  MotionWrap(Footer, 'app__footer'),
+  'Contact',
+  'app__bg2'
+);

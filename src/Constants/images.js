@@ -6,6 +6,8 @@ import node from '../assets/node.png';
 import cover from '../assets/cover.svg';
 import circle from '../assets/circle.svg';
 import logo from '../assets/logo.png';
+import reactjs from '../assets/reactjs.png';
+import nextjs from '../assets/nextjs.png';
 
 const images = {
   email,
@@ -16,5 +18,7 @@ const images = {
   cover,
   circle,
   logo,
+  reactjs,
+  nextjs,
 };
 export default images;

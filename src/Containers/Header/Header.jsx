@@ -54,17 +54,23 @@ const Header = () => {
       >
         <img src={images.cover} alt='cover_bg' />
       </motion.div>
-      <motion.div variants={ScaleVariants} whileInView={ScaleVariants.whileInView} className='app__header-circles'>
-        {[images.flutter, images.javascript, images.node].map((circle, index) => {
-          return (
-            <div className='circle-cmp app__flex' key={`circle-${index}`}>
-              <img src={circle} alt='circle' />
-            </div>
-          );
-        })}
+      <motion.div
+        variants={ScaleVariants}
+        whileInView={ScaleVariants.whileInView}
+        className='app__header-circles'
+      >
+        {[images.reactjs, images.javascript, images.node].map(
+          (circle, index) => {
+            return (
+              <div className='circle-cmp app__flex' key={`circle-${index}`}>
+                <img src={circle} alt='circle' />
+              </div>
+            );
+          }
+        )}
       </motion.div>
     </div>
   );
 };
 
-export default AppWrap(Header, 'Home', 'app__bg1');
+export default AppWrap(Header, 'Home');
