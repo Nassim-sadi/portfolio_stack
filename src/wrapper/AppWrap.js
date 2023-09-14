@@ -1,7 +1,6 @@
 import React from 'react';
-import { SocialMedia } from '../Components';
 
-const AppWrap = (Component, idName, classNames) =>
+const AppWrap = (Component, idName) =>
   function HOC() {
     return (
       <div id={idName} className={`app__container`}>
